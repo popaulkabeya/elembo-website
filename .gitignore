@@ -1,0 +1,9 @@
+# secrets — NEVER publish
+.env
+.env.*
+*.rtf
+# system
+.DS_Store
+.claude/
+# non-site files
+index-dark-backup.html

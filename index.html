@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Elembo Business Technology — The bridge between suppliers, manufacturers & clients</title>
+<meta name="description" content="Elembo Business Technology Limited — Zambia-based provider of ICT, security, engineering, construction, consulting and drone survey solutions across Africa. Sourced, deployed and supported under one roof." />
+<meta name="theme-color" content="#fbfaf7" />
+
+<!-- Google Analytics 4 — remplace G-XXXXXXXXXX par ton ID de mesure -->
+<script>
+  window.GA_ID = 'G-2128NDH61P';
+  (function(){
+    if(!window.GA_ID || window.GA_ID.indexOf('XXXX') > -1) return; // pas d'ID → ne charge rien
+    var s=document.createElement('script');s.async=true;
+    s.src='https://www.googletagmanager.com/gtag/js?id='+window.GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer=window.dataLayer||[];
+    window.gtag=function(){dataLayer.push(arguments);};
+    gtag('js',new Date());
+    gtag('config',window.GA_ID,{anonymize_ip:true});
+  })();
+  // helper d'événements (sécurisé si GA absent)
+  window.eTrack=function(name,params){try{if(window.gtag && window.GA_ID.indexOf('XXXX')===-1)gtag('event',name,params||{});}catch(e){}};
+</script>
+<link rel="canonical" href="https://www.elembotech.com/" />
+<link rel="icon" type="image/png" href="img/elembo-logo.png" />
+<link rel="apple-touch-icon" href="img/elembo-logo.png" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Elembo Business Technology" />
+<meta property="og:title" content="Elembo Business Technology — The trusted bridge to technology, safety & engineering" />
+<meta property="og:description" content="Zambia-based provider of ICT, security, power, engineering, construction, consulting & drone survey — sourced, deployed and supported under one roof." />
+<meta property="og:url" content="https://www.elembotech.com/" />
+<meta property="og:image" content="https://www.elembotech.com/img/hero-mine.webp" />
+<meta property="og:locale" content="en" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Elembo Business Technology" />
+<meta name="twitter:description" content="The trusted bridge to technology, safety & engineering — ICT, security, power, engineering &amp; more across Africa." />
+<meta name="twitter:image" content="https://www.elembotech.com/img/hero-mine.webp" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="image" href="img/hero-mine.webp" fetchpriority="high" />
+<link rel="preload" as="image" href="img/hero-solar.webp" />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#fbfaf7; --bg-2:#f3f1ea; --paper:#ffffff;
+    --ink:#15171c; --ink-soft:#3a3e46; --muted:#74787f; --line:#e7e4dc; --line-2:#efece4;
+    --accent:#1f74cf; --accent-deep:#1a5cab; --accent-soft:#eaf2fc;
+    --dark:#15171c; --dark-2:#1d2027;
+    --r:20px; --r-s:13px;
+    --sh-s:0 1px 2px rgba(21,23,28,.04);
+    --sh:0 24px 60px -28px rgba(21,23,28,.22);
+    --sh-lift:0 36px 80px -32px rgba(21,23,28,.28);
+    --ease:cubic-bezier(.16,1,.3,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Geist',system-ui,sans-serif;background:var(--bg);color:var(--ink-soft);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,h4{font-family:'Geist',sans-serif;color:var(--ink);line-height:1.12;letter-spacing:-.015em;font-weight:600;text-wrap:balance}
+  p{text-wrap:pretty}
+  a{text-decoration:none;color:inherit}
+  img{display:block;max-width:100%}
+  ::selection{background:var(--accent);color:#fff}
+  .wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 28px}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Geist';font-weight:600;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-deep)}
+  .eyebrow::before{content:"";width:22px;height:1.5px;background:var(--accent)}
+  .eyebrow.c{color:var(--muted)}
+  .eyebrow.c::before{background:var(--muted)}
+
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:'Geist';font-weight:600;font-size:.95rem;padding:14px 26px;border-radius:50px;cursor:pointer;border:1px solid transparent;transition:transform .5s var(--ease),box-shadow .5s var(--ease),background .3s,color .3s,border-color .3s}
+  .btn .a{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.22);transition:transform .5s var(--ease)}
+  .btn:hover .a{transform:translateX(3px)}
+  .btn-primary{background:var(--ink);color:#fff}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:var(--sh)}
+  .btn-ghost{background:rgba(255,255,255,.62);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);border-color:rgba(255,255,255,.7)}
+  .btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
+  .btn-accent{background:var(--accent);color:#fff}
+  .btn-accent:hover{background:var(--accent-deep);transform:translateY(-2px);box-shadow:0 20px 40px -18px rgba(31,116,207,.7)}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* scroll progress */
+  .sprog{position:fixed;top:0;left:0;height:2px;width:0;z-index:80;background:var(--accent);transition:width .1s linear}
+
+  /* ---- header ---- */
+  header{position:fixed;top:0;left:0;right:0;z-index:70;transition:.5s var(--ease)}
+  header .bar{display:flex;align-items:center;justify-content:space-between;height:84px;transition:.5s var(--ease)}
+  header.scrolled{padding-top:10px}
+  header.scrolled .bar{height:62px;background:rgba(251,250,247,.8);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);border:1px solid var(--line-2);border-radius:50px;padding:0 12px 0 22px;box-shadow:var(--sh-s)}
+  header .wrap.bar{max-width:none;padding-left:clamp(20px,3vw,52px);padding-right:clamp(20px,3vw,52px)}
+  header.scrolled .wrap.bar{max-width:1060px;margin-left:auto;margin-right:auto}
+  header.scrolled nav ul{background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;border-color:transparent;box-shadow:none;padding:4px}
+  .brand{display:flex;align-items:center}
+  .brand img{height:70px;width:auto;transition:height .5s var(--ease)}
+  header.scrolled .brand img{height:50px}
+  nav ul{list-style:none;display:flex;align-items:center;gap:4px;padding:6px;border-radius:50px;
+    background:rgba(255,255,255,.82);backdrop-filter:blur(18px) saturate(1.5);-webkit-backdrop-filter:blur(18px) saturate(1.5);
+    border:1px solid rgba(255,255,255,.65);box-shadow:0 10px 30px -14px rgba(21,23,28,.28),inset 0 1px 0 rgba(255,255,255,.6)}
+  nav a{position:relative;font-weight:600;font-size:.9rem;color:var(--accent-deep);padding:9px 17px;border-radius:50px;transition:background .3s var(--ease),color .3s,box-shadow .3s,transform .3s var(--ease)}
+  nav a:hover{color:var(--accent-deep);background:var(--accent-soft);transform:translateY(-1px)}
+  nav a:active{transform:translateY(0)}
+  .navr{display:flex;align-items:center;gap:14px}
+  .navr .btn{padding:11px 22px;font-size:.9rem}
+  .burger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:6px;width:42px;height:42px;background:none;border:0;cursor:pointer}
+  .burger span{width:22px;height:2px;background:var(--ink);border-radius:2px;transition:transform .45s var(--ease),opacity .3s}
+  nav.open ~ .navr .burger span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+  nav.open ~ .navr .burger span:nth-child(2){opacity:0}
+  nav.open ~ .navr .burger span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+  /* ---- hero with animated mine scene ---- */
+  .hero{padding:120px 0 70px;position:relative;overflow:hidden;min-height:100vh;display:flex;align-items:flex-start}
+  .minescene{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+  .minescene img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 38%;transform-origin:60% 40%;filter:brightness(1.12) saturate(.9);opacity:.82}
+  .minescene .m1{animation:kenburns 26s ease-in-out infinite alternate,xfadeA 26s ease-in-out infinite}
+  .minescene .m2{object-position:74% 36%}
+  .minescene .m2{animation:kenburns 26s ease-in-out infinite alternate,xfadeB 26s ease-in-out infinite}
+  @keyframes kenburns{from{transform:scale(1.06)}to{transform:scale(1.18) translate(-2%,-1.5%)}}
+  @keyframes xfadeA{0%,42%{opacity:1}50%,92%{opacity:0}100%{opacity:1}}
+  @keyframes xfadeB{0%,42%{opacity:0}50%,92%{opacity:1}100%{opacity:0}}
+  .hero .veil{position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:linear-gradient(90deg,var(--bg) 0%,var(--bg) 15%,rgba(251,250,247,.86) 24%,rgba(251,250,247,.45) 33%,rgba(251,250,247,.14) 44%,transparent 58%),linear-gradient(0deg,var(--bg) 2%,transparent 26%)}
+  .minecredit{position:absolute;right:14px;bottom:12px;z-index:2;font-size:.66rem;color:var(--muted);background:rgba(251,250,247,.7);backdrop-filter:blur(4px);padding:3px 9px;border-radius:50px;border:1px solid var(--line-2)}
+  .hero .wrap{position:relative;z-index:2;width:100%;max-width:none;padding-left:clamp(20px,3vw,52px);padding-right:clamp(20px,3vw,52px);perspective:1200px}
+  .hcontent{max-width:640px;transform-style:preserve-3d;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .5s var(--ease);will-change:transform}
+  .hero.tilt .hcontent{transition:transform .12s linear}
+  .navcta-m{display:none}
+  .hero h1{font-size:clamp(2.7rem,5.2vw,4.4rem);font-weight:700;letter-spacing:-.028em;line-height:1.05;color:var(--ink);margin:0 0 22px;max-width:13ch;text-shadow:1px 2px 0 rgba(26,92,171,.10),3px 5px 10px rgba(21,23,28,.12)}
+  .hero h1 .accent{color:var(--accent)}
+  .hero .lede{font-size:1.18rem;color:var(--ink-soft);max-width:512px;margin-bottom:32px}
+  /* hero box: CTAs + sectors grouped in one frame */
+  .herobox{position:absolute;left:clamp(20px,3vw,52px);bottom:28px;z-index:3;display:flex;flex-direction:column;gap:14px;max-width:540px;
+    background:rgba(255,255,255,.7);backdrop-filter:blur(12px) saturate(1.3);-webkit-backdrop-filter:blur(12px) saturate(1.3);
+    border:1px solid var(--line-2);border-radius:20px;padding:16px;box-shadow:0 16px 40px -20px rgba(21,23,28,.3);
+    transition:opacity .35s var(--ease),transform .35s var(--ease)}
+  .hero .acts{display:flex;gap:13px;flex-wrap:wrap}
+  @media(max-width:680px){.herobox{position:static;max-width:none;margin-top:26px}}
+  .hero .trust{display:flex;align-items:center;gap:12px;color:var(--ink-soft);font-size:.84rem;padding:2px 4px}
+  .hero .trust .av{display:flex}
+  .hero .trust .av span{width:36px;height:36px;border-radius:50%;border:2px solid var(--bg);background:var(--accent-soft);margin-left:-10px;display:grid;place-items:center;color:var(--accent-deep)}
+  .hero .trust .av span:first-child{margin-left:0}
+  .hero .trust .av span svg{width:18px;height:18px;stroke:var(--accent-deep);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .hero .trust b{color:var(--ink);font-weight:600}
+
+  /* ---- floating window panel ---- */
+  .windowsec{background:var(--bg-2);overflow:hidden;position:relative;padding-top:clamp(44px,5vw,62px);padding-bottom:clamp(44px,5vw,62px)}
+  .windowsec::before{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:1100px;height:560px;background:radial-gradient(closest-side,rgba(31,116,207,.16),transparent 72%);pointer-events:none}
+  .winpanel{position:relative;width:min(76vw,1180px);max-width:100%;margin:0 auto;background:var(--paper);border:1px solid var(--line);border-radius:22px;box-shadow:var(--sh-lift);overflow:hidden;transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
+  .winpanel:hover{transform:translateY(-4px);box-shadow:0 50px 100px -36px rgba(21,23,28,.34)}
+  .winbar{display:flex;align-items:center;gap:8px;padding:13px 18px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,var(--bg-2),var(--bg))}
+  .winbar .dot{width:11px;height:11px;border-radius:50%}
+  .winbar .d1{background:#ff5f57}.winbar .d2{background:#febc2e}.winbar .d3{background:#28c840}
+  .winbar .addr{margin:0 auto;display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:50px;background:var(--paper);border:1px solid var(--line);font-size:.76rem;color:var(--muted);font-weight:500}
+  .winbar .addr svg{width:12px;height:12px;stroke:#28c840;fill:none;stroke-width:2.2}
+  .winbar .addr b{color:var(--ink);font-weight:600}
+  .winbody{position:relative;text-align:center}
+  /* image banner header */
+  .winhero{position:relative;padding:clamp(40px,5vw,64px) clamp(28px,5vw,56px) clamp(34px,4vw,46px);color:#fff;overflow:hidden}
+  .winhero::before{content:"";position:absolute;inset:0;z-index:0;background:url('img/promise-farm.webp') center 40%/cover no-repeat;transform:scale(1.05)}
+  .winhero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(21,23,28,.6),rgba(21,23,28,.82)),radial-gradient(70% 90% at 50% 0,rgba(31,116,207,.35),transparent 70%)}
+  .winhero > *{position:relative;z-index:2}
+  .winhero .eyebrow{justify-content:center;color:#bcd6f5}
+  .winhero .eyebrow::before{background:#6aa9ef}
+  .winhero h2{color:#fff;font-size:clamp(1.7rem,3.7vw,2.9rem);font-weight:700;letter-spacing:-.025em;line-height:1.08;margin-top:14px}
+  .winhero h2 .accent{color:#6aa9ef}
+  .winhero p{color:rgba(255,255,255,.82);font-size:1.05rem;max-width:580px;margin:16px auto 0}
+  .winpillars{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:-44px clamp(24px,4vw,40px) 0;text-align:left;position:relative;z-index:3}
+  .winp{position:relative;padding:26px 22px 24px;border:1px solid var(--line);border-radius:16px;background:var(--paper);overflow:hidden;transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .3s}
+  .winp::before{content:"";position:absolute;left:0;top:0;height:3px;width:100%;background:linear-gradient(90deg,var(--accent),var(--accent-deep));transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+  .winp:hover{transform:translateY(-6px);box-shadow:var(--sh);border-color:transparent}
+  .winp:hover::before{transform:scaleX(1)}
+  .winp .no{position:absolute;top:18px;right:20px;font-family:'Geist';font-weight:700;font-size:1.15rem;color:var(--line);letter-spacing:-.02em;transition:color .4s}
+  .winp:hover .no{color:var(--accent-soft)}
+  .winp .ic{width:46px;height:46px;border-radius:13px;background:var(--accent-soft);display:grid;place-items:center;margin-bottom:16px;transition:.4s var(--ease)}
+  .winp:hover .ic{background:var(--accent);transform:translateY(-1px) rotate(-4deg)}
+  .winp .ic svg{width:23px;height:23px;stroke:var(--accent-deep);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;transition:stroke .4s}
+  .winp:hover .ic svg{stroke:#fff}
+  .winp h4{font-size:1.02rem;font-weight:600;margin-bottom:6px}
+  .winp p{font-size:.85rem;color:var(--muted);margin:0;line-height:1.55}
+  .winbody .wincta{display:inline-flex;margin:30px auto clamp(38px,4vw,50px)}
+  @media(max-width:920px){.winpillars{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.winpillars{grid-template-columns:1fr}}
+  @media (prefers-reduced-motion: reduce){.winpanel{animation:none}}
+
+  /* ---- logos strip ---- */
+  .logos{border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);padding:30px 0;overflow:hidden;background:var(--ink)}
+  .logos-lbl{text-align:center;font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:20px}
+  .logos .marquee{position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent)}
+  .logos .track{display:flex;width:max-content;animation:marquee 32s linear infinite}
+  .logos:hover .track{animation-play-state:paused}
+  .logos .track span{flex:0 0 auto;padding:0 48px;font-family:'Geist';font-weight:600;font-size:1.18rem;color:rgba(255,255,255,.72);transition:color .3s;white-space:nowrap}
+  .logos .track span:hover{color:#6aa9ef}
+  @keyframes marquee{to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion: reduce){.logos .track{animation:none;flex-wrap:wrap;justify-content:center;width:auto}}
+
+  section{padding:clamp(40px,4.4vw,60px) 0}
+  /* anchored sections must clear the fixed header when navigated to */
+  section[id],.windowsec{scroll-margin-top:96px}
+  .head{max-width:640px;margin-bottom:30px}
+  .head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .head h2{font-size:clamp(1.9rem,3.6vw,2.8rem);font-weight:700;margin:16px 0 14px;letter-spacing:-.02em;line-height:1.12}
+  .head p{color:var(--muted);font-size:1.08rem}
+
+  /* ---- stats band ---- */
+  .statband{background:var(--bg-2)}
+
+  /* ---- dark manifesto statement ---- */
+  .statement{background:var(--dark);color:#fff;position:relative;overflow:hidden;text-align:center}
+  .statement .bg{position:absolute;inset:0;z-index:0;background:url('img/statement-mine.webp') center/cover no-repeat;opacity:.34}
+  .statement .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,23,28,.68),rgba(21,23,28,.92))}
+  .statement::before{content:"";position:absolute;top:-30%;left:50%;transform:translateX(-50%);width:900px;height:600px;background:radial-gradient(circle,rgba(31,116,207,.3),transparent 60%);pointer-events:none;z-index:1}
+  .statement .wrap{max-width:920px;position:relative;z-index:2}
+  .statement .eyebrow{color:var(--accent);justify-content:center}
+  .statement .eyebrow::before{background:var(--accent)}
+  .statement h2{color:#fff;font-size:clamp(2rem,4.6vw,3.5rem);font-weight:700;letter-spacing:-.025em;line-height:1.1;margin:18px 0 0}
+  .statement h2 .accent{color:var(--accent)}
+  .statement p{color:rgba(255,255,255,.62);font-size:1.1rem;max-width:600px;margin:22px auto 0}
+  .statement .row{display:flex;justify-content:center;gap:clamp(28px,5vw,60px);margin-top:32px;flex-wrap:wrap}
+  .statement .row .s b{font-family:'Geist';font-weight:700;font-size:2rem;color:#fff;display:block;letter-spacing:-.02em}
+  .statement .row .s span{color:rgba(255,255,255,.5);font-size:.84rem}
+  .statgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+  .statgrid .s{background:var(--bg-2);padding:30px 24px;text-align:center;transition:background .3s}
+  .statgrid .s:hover{background:var(--paper)}
+  .statgrid .s b{font-family:'Geist';font-weight:700;font-size:clamp(2.2rem,3.6vw,3rem);color:var(--ink);display:block;letter-spacing:-.03em}
+  .statgrid .s b em{font-style:normal;color:var(--accent)}
+  .statgrid .s b{display:flex;align-items:baseline;justify-content:center;gap:1px}
+  .statgrid .s > span{font-size:.9rem;color:var(--muted);margin-top:6px;display:block}
+
+  /* ---- about ---- */
+  .about{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(36px,4vw,54px);align-items:center}
+  .about .pic{border-radius:22px;overflow:hidden;box-shadow:var(--sh);aspect-ratio:4/3;border:1px solid var(--line)}
+  .about .pic img{width:100%;height:100%;object-fit:cover}
+  .about p{color:var(--ink-soft);font-size:1.04rem;margin-top:14px}
+  .vals{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+  .vals span{font-family:'Geist';font-weight:600;font-size:.84rem;color:var(--ink);background:var(--bg-2);border:1px solid var(--line);border-radius:50px;padding:8px 16px}
+
+  /* ---- services ---- */
+  .sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .scard{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .3s}
+  .scard:hover{transform:translateY(-6px);box-shadow:var(--sh);border-color:transparent}
+  .scard .thumb{position:relative;height:168px;overflow:hidden;background:var(--bg-2)}
+  .scard .thumb img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+  .scard:hover .thumb img{transform:scale(1.07)}
+  .scard .thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 58%,rgba(21,23,28,.14))}
+  .scard .body{padding:0 28px 30px;display:flex;flex-direction:column;flex:1}
+  .scard .ic{width:50px;height:50px;border-radius:14px;background:var(--accent-soft);display:grid;place-items:center;margin:-28px 0 18px;position:relative;z-index:2;border:3px solid var(--paper);box-shadow:var(--sh-s)}
+  .scard .ic svg{width:25px;height:25px;stroke:var(--accent-deep);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .scard h3{font-size:1.22rem;font-weight:600;margin-bottom:9px}
+  .scard p{color:var(--muted);font-size:.92rem;margin-bottom:16px}
+  .scard ul{list-style:none;display:grid;gap:9px}
+  .scard li{font-size:.88rem;color:var(--ink-soft);display:flex;gap:9px;align-items:flex-start}
+  .scard li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent);margin-top:8px;flex:0 0 auto}
+  .scard li b{font-weight:600;color:var(--ink)}
+  .scard .tag{display:inline-flex;align-items:center;gap:6px;margin-bottom:14px;padding:5px 12px;border-radius:50px;background:var(--accent-soft);font-family:'Geist';font-weight:600;font-size:.7rem;letter-spacing:.03em;color:var(--accent-deep)}
+  .scard .tag svg{width:12px;height:12px;stroke:var(--accent);fill:none;stroke-width:2.6}
+
+  /* ---- products (filter) ---- */
+  .filterbar{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:34px}
+  .fbtn{font-family:'Geist';font-weight:600;font-size:.9rem;padding:10px 20px;border-radius:50px;border:1px solid var(--line);background:var(--paper);color:var(--ink-soft);cursor:pointer;transition:.3s var(--ease)}
+  .fbtn .cnt{font-size:.74rem;color:var(--muted)}
+  .fbtn:hover{border-color:var(--accent);color:var(--accent-deep);transform:translateY(-2px)}
+  .fbtn.active{background:var(--ink);color:#fff;border-color:transparent}
+  .fbtn.active .cnt{color:rgba(255,255,255,.7)}
+  .mxgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .mxc{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:28px 26px;display:flex;flex-direction:column;gap:13px;overflow:hidden;transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .3s}
+  .mxc::before{content:"";position:absolute;left:0;top:0;height:3px;width:100%;background:linear-gradient(90deg,var(--accent),var(--accent-deep));transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease);z-index:2}
+  .mxc::after{content:"";position:absolute;top:-60px;right:-60px;width:170px;height:170px;border-radius:50%;background:radial-gradient(closest-side,rgba(31,116,207,.13),transparent 70%);opacity:0;transition:opacity .5s var(--ease);pointer-events:none}
+  .mxc:hover{transform:translateY(-7px);box-shadow:var(--sh);border-color:transparent}
+  .mxc:hover::before{transform:scaleX(1)}
+  .mxc:hover::after{opacity:1}
+  .mxc .ic{width:54px;height:54px;border-radius:15px;background:linear-gradient(140deg,var(--accent-soft),#dceafb);display:grid;place-items:center;border:1px solid #d4e6fb;transition:.45s var(--ease)}
+  .mxc:hover .ic{background:linear-gradient(140deg,var(--accent),var(--accent-deep));border-color:transparent;transform:translateY(-2px)}
+  .mxc .ic svg{width:26px;height:26px;stroke:var(--accent-deep);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;transition:stroke .45s}
+  .mxc:hover .ic svg{stroke:#fff}
+  .mxc .cat{font-family:'Geist';font-weight:600;font-size:.67rem;letter-spacing:.13em;text-transform:uppercase;color:var(--accent-deep);display:inline-flex;align-items:center;gap:7px}
+  .mxc .cat::before{content:"";width:14px;height:1.5px;background:var(--accent)}
+  .mxc h4{font-size:1.14rem;font-weight:600;margin-top:-2px;letter-spacing:-.01em}
+  .mxc p{color:var(--muted);font-size:.88rem;line-height:1.55}
+  .mxc .specs{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto;padding-top:6px}
+  .mxc .specs span{font-size:.72rem;font-weight:600;color:var(--accent-deep);background:var(--accent-soft);border:1px solid #dcebfb00;border-radius:50px;padding:5px 12px}
+  .mxc.hide{display:none}
+  .mxc.anim{animation:mxin .5s var(--ease) both}
+  @keyframes mxin{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+  /* ---- industries ---- */
+  .indstrip{background:var(--bg-2)}
+  .inds{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .ind{position:relative;overflow:hidden;border-radius:18px;min-height:250px;display:flex;flex-direction:column;justify-content:flex-end;padding:22px 22px 20px;color:#fff;border:1px solid var(--line);background:var(--ink);box-shadow:var(--sh-s);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+  .ind img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;transition:transform 1.1s var(--ease)}
+  .ind::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(21,23,28,.06) 26%,rgba(21,23,28,.5) 60%,rgba(15,17,22,.92))}
+  .ind:hover{transform:translateY(-6px);box-shadow:var(--sh)}
+  .ind:hover img{transform:scale(1.08)}
+  .ind > *{position:relative;z-index:2}
+  .ind .ic{width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.16);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);display:grid;place-items:center;margin-bottom:auto;border:1px solid rgba(255,255,255,.24)}
+  .ind .ic svg{width:23px;height:23px;stroke:#fff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .ind h4{font-size:1.08rem;font-weight:600;color:#fff;margin-top:14px}
+  .ind p{color:rgba(255,255,255,.82);font-size:.83rem;line-height:1.5;margin-top:4px}
+  .ind-cta{background:linear-gradient(150deg,var(--accent),var(--accent-deep));border-color:transparent}
+  .ind-cta::after{background:none}
+  .ind-cta .ic{background:rgba(255,255,255,.18)}
+  .ind-cta:hover{box-shadow:0 26px 54px -22px rgba(31,116,207,.85)}
+
+  /* ---- our work gallery ---- */
+  .work{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .wcard{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--bg-2);aspect-ratio:16/11;box-shadow:var(--sh-s);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+  .wcard:hover{transform:translateY(-6px);box-shadow:var(--sh)}
+  .wcard img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+  .wcard:hover img{transform:scale(1.06)}
+  .wcard .ph{position:absolute;inset:0;z-index:0;background:linear-gradient(140deg,var(--accent-soft),var(--bg-2));display:grid;place-items:center}
+  .wcard .ph svg{width:46px;height:46px;stroke:var(--accent-deep);opacity:.4;fill:none;stroke-width:1.4}
+  .wcard .cap{position:absolute;left:0;right:0;bottom:0;padding:46px 22px 20px;color:#fff;background:linear-gradient(180deg,transparent,rgba(21,23,28,.86));z-index:2}
+  .wcard .cap .t{display:inline-flex;align-items:center;gap:7px;font-family:'Geist';font-weight:600;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:#cfe1f7;margin-bottom:5px}
+  .wcard .cap h4{color:#fff;font-size:1.05rem;font-weight:600}
+
+  /* ---- credentials ---- */
+  .certs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .cert{display:flex;gap:14px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:var(--r-s);padding:22px;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+  .cert:hover{transform:translateY(-3px);box-shadow:var(--sh-s)}
+  .cert .b{flex:0 0 auto;width:42px;height:42px;border-radius:11px;background:var(--accent-soft);display:grid;place-items:center}
+  .cert .b svg{width:21px;height:21px;stroke:var(--accent-deep);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .cert h4{font-size:.98rem;font-weight:600;margin-bottom:3px}
+  .cert p{color:var(--muted);font-size:.82rem}
+
+  /* ---- CTA ---- */
+  .cta{background:var(--dark);border-radius:0;position:relative;overflow:hidden}
+  .cta::before{content:"";position:absolute;right:-30px;top:50%;transform:translateY(-50%);width:360px;height:210px;background:url('img/elembo-logo-white.webp') right center/contain no-repeat;opacity:.06;pointer-events:none}
+  .cta .wrap{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:34px;flex-wrap:wrap}
+  .cta h2{color:#fff;font-size:clamp(1.7rem,3vw,2.4rem);max-width:620px;font-weight:700;letter-spacing:-.02em}
+  .cta p{color:rgba(255,255,255,.6);margin-top:10px}
+
+  /* ---- contact ---- */
+  .cwrap{display:grid;grid-template-columns:.92fr 1.08fr;gap:44px;align-items:start}
+  .cpic{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--sh-s);margin-bottom:24px;aspect-ratio:16/7}
+  .cpic img{width:100%;height:100%;object-fit:cover}
+  .cpic .badge{position:absolute;left:14px;bottom:12px;display:inline-flex;align-items:center;gap:7px;background:rgba(251,250,247,.92);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid var(--line-2);border-radius:50px;padding:6px 13px;font-family:'Geist';font-weight:600;font-size:.76rem;color:var(--ink)}
+  .cpic .badge::before{content:"";width:8px;height:8px;border-radius:50%;background:#28c840}
+  .ci{display:flex;gap:14px;margin-bottom:20px}
+  .ci .ic{flex:0 0 auto;width:44px;height:44px;border-radius:12px;background:var(--accent-soft);display:grid;place-items:center}
+  .ci .ic svg{width:21px;height:21px;stroke:var(--accent-deep);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .ci h4{font-size:.98rem;font-weight:600;margin-bottom:2px}
+  .ci p{color:var(--muted);font-size:.9rem}
+  form{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:32px}
+  form .row{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+  form label{font-family:'Geist';font-weight:600;font-size:.8rem;color:var(--ink);display:block;margin:14px 0 6px}
+  form input,form textarea,form select{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:11px;font-family:'Geist';font-size:.94rem;background:var(--bg);color:var(--ink);transition:.2s}
+  form input:focus,form textarea:focus,form select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);background:var(--paper)}
+  form textarea{min-height:120px;resize:vertical}
+  form .btn{margin-top:20px;width:100%;justify-content:center}
+  .formnote{margin-top:14px;text-align:center;font-size:.86rem;color:var(--accent-deep);background:var(--accent-soft);border:1px solid var(--line);border-radius:11px;padding:11px 14px}
+  .formnote.err{color:#a8331f;background:#fdecea;border-color:#f6d5cf}
+
+  /* ---- footer ---- */
+  footer{background:var(--dark);color:rgba(255,255,255,.6);padding:74px 0 28px}
+  .fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.1fr;gap:40px}
+  footer .flogo{height:92px;width:auto;margin-bottom:20px}
+  footer h5{font-family:'Geist';color:#fff;font-size:.98rem;font-weight:600;margin-bottom:16px}
+  footer ul{list-style:none;display:grid;gap:10px}
+  footer a{font-size:.9rem;transition:.2s}
+  footer a:hover{color:#fff}
+  .fdesc{font-size:.9rem;margin-bottom:18px;max-width:300px}
+  .socials{display:flex;gap:9px}
+  .socials a{width:38px;height:38px;border-radius:11px;background:rgba(255,255,255,.07);display:grid;place-items:center;color:rgba(255,255,255,.75);font-weight:600;font-size:.82rem;transition:.25s}
+  .socials a:hover{background:var(--accent);color:#fff}
+  .fbot{border-top:1px solid rgba(255,255,255,.1);margin-top:46px;padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.82rem;color:rgba(255,255,255,.45)}
+
+  /* ---- focus / motion ---- */
+  :focus-visible{outline:2.5px solid var(--accent);outline-offset:3px;border-radius:4px}
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+    .reveal{opacity:1;transform:none}
+  }
+
+  @media(max-width:980px){
+    .about,.cwrap{grid-template-columns:1fr;gap:46px}
+    .sgrid,.mxgrid,.work{grid-template-columns:repeat(2,1fr)}
+    .statgrid,.inds{grid-template-columns:repeat(2,1fr)}
+    .certs{grid-template-columns:repeat(2,1fr)}
+    .fgrid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:680px){
+    nav ul,.navr .btn{display:none}
+    .burger{display:flex}
+    nav.open ul{display:flex;position:absolute;top:74px;left:14px;right:14px;flex-direction:column;align-items:stretch;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px;gap:16px;box-shadow:var(--sh)}
+    nav.open .navcta-m{display:block}
+    nav.open .navcta-m .btn{width:100%;justify-content:center}
+    .sgrid,.mxgrid,.certs,.fgrid,form .row,.work{grid-template-columns:1fr}
+    .statgrid,.inds{grid-template-columns:1fr 1fr}
+    .fgrid{grid-template-columns:1fr}
+  }
+
+  /* ---- chat widget ---- */
+  .chatw{position:fixed;right:22px;bottom:22px;z-index:90;font-family:'Geist',sans-serif}
+  .chat-fab{display:inline-flex;align-items:center;gap:9px;height:56px;padding:0 20px 0 18px;border:0;border-radius:50px;cursor:pointer;
+    background:linear-gradient(120deg,var(--accent),var(--accent-deep));color:#fff;font-family:'Geist';font-weight:600;font-size:.95rem;
+    box-shadow:0 16px 38px -12px rgba(31,116,207,.7);transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+  .chat-fab:hover{transform:translateY(-3px);box-shadow:0 22px 48px -12px rgba(31,116,207,.85)}
+  .chat-fab svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+  .chatw.open .chat-fab{display:none}
+  .chat-panel[hidden]{display:none!important}
+  .chat-panel{position:absolute;right:0;bottom:0;width:min(380px,92vw);height:min(560px,78vh);display:flex;flex-direction:column;overflow:hidden;
+    background:var(--paper);border:1px solid var(--line);border-radius:20px;box-shadow:0 40px 90px -30px rgba(21,23,28,.5);
+    transform-origin:bottom right;animation:chatpop .4s var(--ease)}
+  @keyframes chatpop{from{opacity:0;transform:translateY(16px) scale(.96)}to{opacity:1;transform:none}}
+  .chat-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px;background:linear-gradient(120deg,var(--accent),var(--accent-deep));color:#fff}
+  .chat-head .ci{display:flex;align-items:center;gap:11px}
+  .chat-head .av{width:38px;height:38px;border-radius:11px;background:rgba(255,255,255,.16);display:grid;place-items:center;overflow:hidden}
+  .chat-head .av img{width:30px;height:auto}
+  .chat-head b{font-weight:700;font-size:.98rem;display:block;line-height:1.1}
+  .chat-head .st{font-size:.74rem;color:rgba(255,255,255,.85);display:flex;align-items:center;gap:5px}
+  .chat-head .st::before{content:"";width:7px;height:7px;border-radius:50%;background:#3ee07d;box-shadow:0 0 0 0 rgba(62,224,125,.6);animation:pulse2 2s infinite}
+  @keyframes pulse2{0%{box-shadow:0 0 0 0 rgba(62,224,125,.6)}70%{box-shadow:0 0 0 7px rgba(62,224,125,0)}100%{box-shadow:0 0 0 0 rgba(62,224,125,0)}}
+  .chat-close{background:rgba(255,255,255,.15);border:0;color:#fff;width:32px;height:32px;border-radius:9px;cursor:pointer;font-size:1.2rem;line-height:1;transition:.2s}
+  .chat-close:hover{background:rgba(255,255,255,.28)}
+  .chat-msgs{flex:1;overflow-y:auto;padding:18px 16px;display:flex;flex-direction:column;gap:11px;background:var(--bg)}
+  .msg{max-width:84%;padding:11px 14px;border-radius:15px;font-size:.9rem;line-height:1.5;white-space:pre-wrap;word-wrap:break-word}
+  .msg.bot{align-self:flex-start;background:var(--paper);border:1px solid var(--line);color:var(--ink-soft);border-bottom-left-radius:5px}
+  .msg.me{align-self:flex-end;background:var(--accent);color:#fff;border-bottom-right-radius:5px}
+  .msg.typing{display:flex;gap:4px;align-items:center}
+  .msg.typing span{width:7px;height:7px;border-radius:50%;background:var(--muted);animation:blink 1.2s infinite}
+  .msg.typing span:nth-child(2){animation-delay:.2s}.msg.typing span:nth-child(3){animation-delay:.4s}
+  @keyframes blink{0%,60%,100%{opacity:.3}30%{opacity:1}}
+  .chat-quick{display:flex;flex-wrap:wrap;gap:7px;padding:0 16px 10px;background:var(--bg)}
+  .chat-quick button{font-family:'Geist';font-weight:600;font-size:.78rem;color:var(--accent-deep);background:var(--accent-soft);border:1px solid var(--line);border-radius:50px;padding:7px 13px;cursor:pointer;transition:.2s}
+  .chat-quick button:hover{background:var(--accent);color:#fff;border-color:transparent}
+  .chat-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line);background:var(--paper)}
+  .chat-form input{flex:1;border:1px solid var(--line);border-radius:50px;padding:11px 16px;font-family:'Geist';font-size:.9rem;background:var(--bg);color:var(--ink);outline:none}
+  .chat-form input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+  .chat-form .send{flex:0 0 auto;width:44px;height:44px;border-radius:50%;border:0;cursor:pointer;background:var(--accent);color:#fff;display:grid;place-items:center;transition:.25s}
+  .chat-form .send:hover{background:var(--accent-deep)}
+  .chat-form .send svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .chat-foot{text-align:center;font-size:.66rem;color:var(--muted);padding:7px;background:var(--paper)}
+  @media(max-width:480px){.chatw{right:14px;bottom:14px}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Elembo Business Technology Limited",
+  "alternateName": "Elembo Business Group Technology",
+  "url": "https://www.elembotech.com/",
+  "logo": "https://www.elembotech.com/img/elembo-logo.png",
+  "email": "sales@elembotech.com",
+  "telephone": "+260769552250",
+  "foundingDate": "2024",
+  "description": "Elembo Business Technology Limited — the trusted bridge between suppliers, manufacturers and clients, delivering ICT, security, power, engineering, construction, consulting and drone survey across Africa.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Mukuba Pension House, Office 339, 2nd Floor, West Wing, Stand 1429, President Avenue",
+    "addressLocality": "Kitwe",
+    "addressRegion": "Copperbelt Province",
+    "addressCountry": "ZM"
+  },
+  "areaServed": "Africa",
+  "knowsAbout": ["ICT", "Cybersecurity", "Safety & Security", "Engineering", "Construction", "Consulting", "Drone Survey", "Renewable Energy"],
+  "sameAs": []
+}
+</script>
+</head>
+<body>
+
+<div class="sprog" id="sprog"></div>
+
+<!-- HEADER -->
+<header id="hdr">
+  <div class="wrap bar">
+    <a href="#home" class="brand"><img src="img/elembo-logo.webp" alt="Elembo Business Group Technology" /></a>
+    <nav id="nav">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#industries">Industries</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#certs">Credentials</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="navcta-m"><a href="#contact" class="btn btn-accent">Request a quote <span class="a">→</span></a></li>
+      </ul>
+    </nav>
+    <div class="navr">
+      <a href="#contact" class="btn btn-primary">Request a quote</a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <!-- animated mine scene background -->
+  <div class="minescene" aria-hidden="true">
+    <img class="m1" src="img/hero-mine.webp" alt="Open-pit mine — Elembo serves Africa's mining sector" />
+    <img class="m2" src="img/hero-solar.webp" alt="Elembo technician installing solar power on a mine site" />
+  </div>
+  <div class="veil"></div>
+
+  <div class="wrap">
+    <div class="hcontent">
+      <h1 class="reveal">The trusted bridge to <span class="accent">technology, safety &amp; engineering</span></h1>
+      <p class="lede reveal">Elembo Business Technology connects African industry to world-class ICT, security, power and engineering solutions — sourced, deployed and supported under one roof.</p>
+    </div>
+  </div>
+  <div class="herobox reveal">
+    <div class="acts">
+      <a href="#services" class="btn btn-accent">Explore solutions <span class="a">→</span></a>
+      <a href="#contact" class="btn btn-ghost">Talk to our team</a>
+    </div>
+    <div class="trust">
+      <span class="av">
+        <span title="Banks"><svg viewBox="0 0 24 24"><path d="M3 21h18M4 21V9l8-5 8 5v12M4 9h16M9 21v-6h6v6"/></svg></span>
+        <span title="Hospitals"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V6a2 2 0 012-2h10a2 2 0 012 2v15M12 8v6M9 11h6"/></svg></span>
+        <span title="Mining"><svg viewBox="0 0 24 24"><path d="M3 21h18M4 21V10l5-3 5 3M14 21V7l6 4v10"/></svg></span>
+        <span title="Industry"><svg viewBox="0 0 24 24"><path d="M3 21V8l6-3v4l6-3v5l6-2v12M3 21h18"/></svg></span>
+      </span>
+      <span><b>6 solution areas</b>, one accountable partner — for banks, hospitals, mining, industry &amp; more.</span>
+    </div>
+  </div>
+</section>
+
+<!-- LOGOS MARQUEE -->
+<div class="logos">
+  <p class="logos-lbl">Authorized partnerships · genuine products</p>
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>Matrix Comsec</span><span>Motorola</span><span>COMMANDO</span><span>APC</span><span>CyberPower</span><span>Starlink</span><span>JWM</span><span>Megger</span>
+      <span>Matrix Comsec</span><span>Motorola</span><span>COMMANDO</span><span>APC</span><span>CyberPower</span><span>Starlink</span><span>JWM</span><span>Megger</span>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<section class="statband">
+  <div class="wrap">
+    <div class="statgrid reveal">
+      <div class="s"><b><span data-count="6">6</span></b><span>Solution areas</span></div>
+      <div class="s"><b><span data-count="8">8</span><em>+</em></b><span>Authorized brands</span></div>
+      <div class="s"><b><span data-count="2024">2024</span></b><span>Incorporated in Zambia</span></div>
+      <div class="s"><b><span data-count="100">100</span><em>%</em></b><span>ZPPA &amp; statutory compliant</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOATING WINDOW PANEL -->
+<section class="windowsec">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="winpanel">
+        <div class="winbar">
+          <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span>
+          <span class="addr"><svg viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg> <b>elembotech.com</b>/promise</span>
+        </div>
+        <div class="winbody">
+          <div class="winhero">
+            <span class="eyebrow">Our promise</span>
+            <h2>The trusted bridge to <span class="accent">technology, safety &amp; engineering</span></h2>
+            <p>One accountable partner — sourced, deployed and supported under one roof, from first assessment to lifetime support.</p>
+          </div>
+          <div class="winpillars">
+            <div class="winp">
+              <span class="no">01</span>
+              <span class="ic"><svg viewBox="0 0 24 24"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M3 19c.7-3 3-4.5 5-4.5M21 19c-.7-3-3-4.5-5-4.5"/></svg></span>
+              <h4>One accountable partner</h4>
+              <p>One contract, one team, one phone number. No vendor blame-game when something needs fixing — the responsibility is ours.</p>
+            </div>
+            <div class="winp">
+              <span class="no">02</span>
+              <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 4.5-3 7.6-8 9-5-1.4-8-4.5-8-9V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg></span>
+              <h4>Genuine, warrantied kit</h4>
+              <p>Authorized distributor and integrator for the brands we deploy — original equipment, full warranty, no grey-market risk.</p>
+            </div>
+            <div class="winp">
+              <span class="no">03</span>
+              <span class="ic"><svg viewBox="0 0 24 24"><path d="M4 12h11M11 7l5 5-5 5M16 5h4v14h-4"/></svg></span>
+              <h4>From survey to support</h4>
+              <p>Site assessment, design, supply, commissioning and lifetime maintenance — we stay on the outcome long after handover.</p>
+            </div>
+            <div class="winp">
+              <span class="no">04</span>
+              <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 5 5.5.6-4 3.8 1.1 5.4L12 19.7 6.9 22l1.1-5.4-4-3.8 5.5-.6z"/></svg></span>
+              <h4>Tender &amp; audit ready</h4>
+              <p>Fully registered, tax and statutory compliant, with the paperwork in order for public and private tenders across the region.</p>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-accent wincta">Start a project <span class="a">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap about">
+    <div class="pic reveal"><img src="img/about-team.webp" alt="Elembo engineer on site at a power transformer" /></div>
+    <div class="reveal">
+      <span class="eyebrow">Who we are</span>
+      <h2 style="margin:16px 0 4px">A completely connected technology &amp; supply partner</h2>
+      <p>Based in Kitwe, Copperbelt Province, Elembo Business Technology Limited is the bridge between suppliers, manufacturers and clients. We simplify procurement, reduce costs and deliver dependable, end-to-end technical solutions for banks, hospitals, offices, mining, farms, industries and schools across Africa.</p>
+      <p>From the first site assessment to commissioning and ongoing maintenance, our team owns the whole journey — so you get one accountable partner instead of a dozen disconnected vendors.</p>
+      <div class="vals">
+        <span>Safety</span><span>Unity</span><span>Efficiency</span><span>Development</span><span>Innovation</span><span>Responsibility</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MANIFESTO STATEMENT -->
+<section class="statement">
+  <div class="bg"></div>
+  <div class="wrap">
+    <span class="eyebrow reveal">Why Elembo</span>
+    <h2 class="reveal">When the network must stay up, the power must stay on and the site must stay <span class="accent">secure</span> — Africa's most demanding operations trust one partner.</h2>
+    <p class="reveal">From the first site survey to commissioning and lifetime support, a single accountable team owns every step. You trade a dozen disconnected vendors for one partner who answers for the result.</p>
+    <div class="row reveal">
+      <div class="s"><b>End-to-end</b><span>Assessment → support</span></div>
+      <div class="s"><b>ZPPA</b><span>Registered &amp; compliant</span></div>
+      <div class="s"><b>Matrix</b><span>Authorized integrator</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Services &amp; solutions</span>
+      <h2>Six solution areas, one accountable partner</h2>
+      <p>We source the right products, deploy the right people, and stay through commissioning and support.</p>
+    </div>
+    <div class="sgrid">
+      <article class="scard reveal">
+        <div class="thumb"><img src="img/card-ict.webp" alt="ICT technician on a telecom tower" loading="lazy" /></div>
+        <div class="body">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 2.6 15.4 0 18M12 3c-2.6 2.6-2.6 15.4 0 18"/></svg></div>
+        <h3>ICT &amp; Connectivity</h3>
+        <p>Keep every site online, connected and protected.</p>
+        <ul><li><b>Starlink</b> high-speed internet for remote sites — install &amp; maintenance</li><li>Fiber-optic networks &amp; structured cabling</li><li>IT infrastructure — servers, networks &amp; support</li><li><b>Cybersecurity</b> solutions &amp; protection</li></ul>
+      </div>
+      </article>
+      <article class="scard reveal">
+        <div class="thumb"><img src="img/card-security.webp" alt="Network operations and security systems" loading="lazy" /></div>
+        <div class="body">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <span class="tag"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg> Matrix Comsec Authorized</span>
+        <h3>Safety &amp; Security</h3>
+        <p>Protect people, assets and sites with integrated systems.</p>
+        <ul><li><b>Matrix SATATYA</b> IP cameras up to 8MP</li><li><b>Matrix COSEC</b> access control &amp; biometrics</li><li>Time-attendance &amp; canteen management</li><li>Fire/dust suppression · PPE · fencing</li></ul>
+      </div>
+      </article>
+      <article class="scard reveal">
+        <div class="thumb"><img src="img/card-engineering.webp" alt="Engineers commissioning a power transformer" loading="lazy" /></div>
+        <div class="body">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div>
+        <h3>Engineering</h3>
+        <p>Electrical &amp; automation engineering, installed and maintained.</p>
+        <ul><li>Electrical engineering &amp; industrial automation</li><li>Electrical motors &amp; <b>VSD</b> — install &amp; maintenance</li><li>Industrial generators — supply, commissioning &amp; service</li><li>Switchgear, transformers &amp; cable testing</li></ul>
+      </div>
+      </article>
+      <article class="scard reveal">
+        <div class="thumb"><img src="img/card-construction.webp" alt="Site team on a solar construction project" loading="lazy" /></div>
+        <div class="body">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-5h6v5M5 11h14"/></svg></div>
+        <h3>Construction</h3>
+        <p>Building and rehabilitating critical infrastructure.</p>
+        <ul><li>Public infrastructure projects</li><li>Civil &amp; structural works</li><li>Plant &amp; equipment rehabilitation</li><li>Site preparation &amp; installations</li></ul>
+      </div>
+      </article>
+      <article class="scard reveal">
+        <div class="thumb"><img src="img/card-consulting.webp" alt="Elembo team reviewing a project plan" loading="lazy" /></div>
+        <div class="body">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M16 8l-2.2 6L8 16l2.2-6L16 8z"/></svg></div>
+        <h3>Consulting</h3>
+        <p>Independent advice that de-risks investment.</p>
+        <ul><li>IT consulting &amp; system design</li><li>Project management</li><li>Renewable energy advisory</li><li>Feasibility studies</li></ul>
+      </div>
+      </article>
+      <article class="scard reveal">
+        <div class="thumb"><img src="img/card-drone.webp" alt="Aerial drone view of an open-pit mine" loading="lazy" /></div>
+        <div class="body">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 8a3 3 0 100 6 3 3 0 000-6zM5 5L9 9M19 5l-4 4M5 19l4-4M19 19l-4-4M3 5h2V3M21 5h-2V3M3 19h2v2M21 19h-2v2"/></svg></div>
+        <h3>Drone Survey</h3>
+        <p>Aerial intelligence for faster, safer decisions.</p>
+        <ul><li>Aerial site surveys &amp; mapping</li><li>Asset &amp; infrastructure inspections</li><li>Volumetrics &amp; progress monitoring</li><li>High-resolution imagery &amp; reporting</li></ul>
+      </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Featured products</span>
+      <h2>Matrix Comsec solutions we deliver</h2>
+      <p>Authorized system integrator across video surveillance, access control and telecom.</p>
+    </div>
+    <div class="filterbar reveal" id="mxfilter">
+      <button class="fbtn active" data-filter="all">All <span class="cnt">9</span></button>
+      <button class="fbtn" data-filter="video">Video Surveillance <span class="cnt">3</span></button>
+      <button class="fbtn" data-filter="access">Access &amp; Attendance <span class="cnt">3</span></button>
+      <button class="fbtn" data-filter="telecom">Telecom &amp; UC <span class="cnt">3</span></button>
+    </div>
+    <div class="mxgrid" id="mxgrid">
+      <article class="mxc anim" data-cat="video"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7h11v10H3zM14 10l7-3v10l-7-3"/><circle cx="8" cy="12" r="2.2"/></svg></div><div class="cat">Video Surveillance</div><h4>SATATYA Project IP Cameras</h4><p>High-resolution IP cameras for mission-critical sites, with wide dynamic range and long-range night vision.</p><div class="specs"><span>Up to 8MP</span><span>WDR</span><span>IR 200m</span></div></article>
+      <article class="mxc anim" data-cat="video"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div class="cat">Video Surveillance</div><h4>SATATYA SAMAS — VMS</h4><p>Centralized video management for multi-site monitoring, analytics and intelligent alerts.</p><div class="specs"><span>Centralized</span><span>Analytics</span><span>Multi-site</span></div></article>
+      <article class="mxc anim" data-cat="video"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h0M7 13h0M11 9h6M11 13h6"/></svg></div><div class="cat">Video Surveillance</div><h4>SATATYA NVR / Recorders</h4><p>Network video recorders with efficient H.265 compression, RAID storage and PoE.</p><div class="specs"><span>H.265</span><span>RAID</span><span>PoE</span></div></article>
+      <article class="mxc anim" data-cat="access"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="4"/><path d="M5 20c1.2-3.6 3.6-5 7-5s5.8 1.4 7 5"/></svg></div><div class="cat">Access Control</div><h4>COSEC ARGO FACE</h4><p>Touchless face-recognition door controller with mask detection and multi-credential support.</p><div class="specs"><span>Touchless</span><span>Face + RFID</span><span>Mask detect</span></div></article>
+      <article class="mxc anim" data-cat="access"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 4.5-3 7.6-8 9-5-1.4-8-4.5-8-9V6l8-4z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg></div><div class="cat">Access Control</div><h4>COSEC VEGA Controllers</h4><p>Rugged RFID &amp; fingerprint door controllers for indoor and outdoor entry points.</p><div class="specs"><span>IP65</span><span>Fingerprint</span><span>RFID</span></div></article>
+      <article class="mxc anim" data-cat="access"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18M7 3v18"/></svg></div><div class="cat">Time &amp; Attendance</div><h4>COSEC APTA &amp; Canteen</h4><p>Payroll-ready time-attendance with cashless canteen management and reporting.</p><div class="specs"><span>Payroll-ready</span><span>Cashless</span><span>Reports</span></div></article>
+      <article class="mxc anim" data-cat="telecom"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h4"/></svg></div><div class="cat">Telecom &amp; UC</div><h4>Matrix ETERNITY IP-PBX</h4><p>Scalable hybrid IP-PBX and unified-communications platform for offices, sites and campuses.</p><div class="specs"><span>SIP</span><span>Hybrid</span><span>Scalable</span></div></article>
+      <article class="mxc anim" data-cat="telecom"><div class="ic"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4M9 6h6v5H9z"/></svg></div><div class="cat">Telecom &amp; UC</div><h4>Matrix SPARSH IP Phones</h4><p>HD-voice IP and video desk phones with PoE, programmable keys and crisp call quality.</p><div class="specs"><span>HD voice</span><span>PoE</span><span>Video</span></div></article>
+      <article class="mxc anim" data-cat="telecom"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0116 0M7 12a5 5 0 0110 0M10 12a2 2 0 014 0M12 12v8"/></svg></div><div class="cat">Telecom &amp; UC</div><h4>SIMADO &amp; SETU Gateways</h4><p>GSM, VoIP and ISDN gateways that bridge mobile, IP and legacy networks reliably.</p><div class="specs"><span>GSM</span><span>VoIP</span><span>ISDN</span></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="indstrip" id="industries">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="eyebrow c">Industries we serve</span>
+      <h2>Built for Africa's most demanding sectors</h2>
+    </div>
+    <div class="inds reveal">
+      <div class="ind"><img src="img/ind-banks.webp" alt="Elembo technician installing CCTV and access control in a bank branch" loading="lazy" /><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M4 21V9l8-5 8 5v12M4 9h16M9 21v-6h6v6"/></svg></div><h4>Banks</h4><p>High-grade access control, biometrics &amp; monitored CCTV for branches and vaults.</p></div>
+      <div class="ind"><img src="img/ind-hospitals.webp" alt="Elembo technician installing surveillance in a hospital corridor" loading="lazy" /><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V6a2 2 0 012-2h10a2 2 0 012 2v15M12 8v6M9 11h6"/></svg></div><h4>Hospitals</h4><p>Surveillance, access control, nurse-call networks &amp; reliable backup power.</p></div>
+      <div class="ind"><img src="img/ind-offices.webp" alt="Elembo team setting up network cabling and IP phones in an office" loading="lazy" /><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V4h10v17M15 9h4v12M8 8h0M11 8h0M8 12h0M11 12h0"/></svg></div><h4>Offices</h4><p>Structured networks, IP telephony, CCTV, access control &amp; time-attendance.</p></div>
+      <div class="ind"><img src="img/ind-mining.webp" alt="Open-pit mine served by Elembo" loading="lazy" /><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M4 21V10l5-3 5 3M14 21V7l6 4v10"/></svg></div><h4>Mining</h4><p>Site surveillance, comms, power, automation &amp; Megger cable testing.</p></div>
+      <div class="ind"><img src="img/ind-farms.webp" alt="Commercial farm with solar power and perimeter security" loading="lazy" /><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v6m0 0a4 4 0 11-4 4M12 9a4 4 0 014 4M5 21c1-4 3-6 7-6s6 2 7 6"/></svg></div><h4>Farms</h4><p>Electric fencing, perimeter security &amp; off-grid solar for remote sites.</p></div>
+      <div class="ind"><img src="img/ind-industries.webp" alt="Elembo technician on an industrial automation control panel" loading="lazy" /><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21V8l6-3v4l6-3v5l6-2v12M3 21h18M8 13h0M14 13h0"/></svg></div><h4>Industries</h4><p>Automation, PLC/SCADA, switchgear, generators &amp; standby power.</p></div>
+      <div class="ind"><img src="img/ind-schools.webp" alt="Elembo technician installing Wi-Fi and CCTV in a school" loading="lazy" /><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 8l9-4 9 4-9 4-9-4zM7 10v5c0 1 2.2 2.5 5 2.5s5-1.5 5-2.5v-5M21 8v5"/></svg></div><h4>Schools</h4><p>Campus networks, CCTV, access control &amp; safe, connected learning.</p></div>
+      <a class="ind ind-cta" href="#contact"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><h4>Your sector?</h4><p>Tell us your environment — we tailor the right solution. Let's talk →</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- OUR WORK -->
+<section id="work">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="eyebrow">Recent work</span>
+      <h2>On site, across Africa</h2>
+      <p>Real projects, delivered and commissioned by our own engineers.</p>
+    </div>
+    <div class="work reveal">
+      <figure class="wcard">
+        <div class="ph"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></div>
+        <img src="img/work-generator.webp" alt="Generator commissioning on site" loading="lazy" onerror="this.style.display='none'" />
+        <figcaption class="cap"><span class="t">Engineering</span><h4>Generator commissioning &amp; ATS</h4></figcaption>
+      </figure>
+      <figure class="wcard">
+        <div class="ph"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div>
+        <img src="img/work-engineer.webp" alt="Field engineering and diagnostics" loading="lazy" onerror="this.style.display='none'" />
+        <figcaption class="cap"><span class="t">Engineering</span><h4>On-site diagnostics &amp; testing</h4></figcaption>
+      </figure>
+      <figure class="wcard">
+        <div class="ph"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="11" rx="2"/><path d="M3 17l-1 3M21 17l1 3M8 6V4h8v2"/><circle cx="8" cy="20" r="1.5"/><circle cx="16" cy="20" r="1.5"/></svg></div>
+        <img src="img/work-locomotive.webp" alt="Locomotive rehabilitation project" loading="lazy" onerror="this.style.display='none'" />
+        <figcaption class="cap"><span class="t">Construction</span><h4>Locomotive 33-001 rehabilitation</h4></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section id="certs">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="eyebrow">Credentials &amp; registrations</span>
+      <h2>A compliant foundation, built to travel across Africa</h2>
+      <p>Fully registered and audit-ready in our home market of Zambia — the legal, tax and quality footing we build on to deliver and partner on projects right across the continent.</p>
+    </div>
+    <div class="certs">
+      <div class="cert reveal"><div class="b"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 5 5.5.6-4 3.8 1.1 5.4L12 19.7 6.9 22l1.1-5.4-4-3.8 5.5-.6z"/></svg></div><div><h4>ZPPA Registered Supplier</h4><p>Mining, ICT, electrical, engineering &amp; security.</p></div></div>
+      <div class="cert reveal"><div class="b"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 5 5.5.6-4 3.8 1.1 5.4L12 19.7 6.9 22l1.1-5.4-4-3.8 5.5-.6z"/></svg></div><div><h4>Matrix Comsec Authorized Integrator</h4><p>Manufacturer-authorized for security &amp; telecom — deployable across borders.</p></div></div>
+      <div class="cert reveal"><div class="b"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 5 5.5.6-4 3.8 1.1 5.4L12 19.7 6.9 22l1.1-5.4-4-3.8 5.5-.6z"/></svg></div><div><h4>JWM Official Distributor</h4><p>Guard Tour System distributor (2025–2030).</p></div></div>
+      <div class="cert reveal"><div class="b"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 5 5.5.6-4 3.8 1.1 5.4L12 19.7 6.9 22l1.1-5.4-4-3.8 5.5-.6z"/></svg></div><div><h4>ZRA Tax Clearance</h4><p>General Tax Clearance — TPIN 2003480504.</p></div></div>
+      <div class="cert reveal"><div class="b"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 5 5.5.6-4 3.8 1.1 5.4L12 19.7 6.9 22l1.1-5.4-4-3.8 5.5-.6z"/></svg></div><div><h4>Workers' Compensation Compliant</h4><p>Registered with the WCFCB.</p></div></div>
+      <div class="cert reveal"><div class="b"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 5 5.5.6-4 3.8 1.1 5.4L12 19.7 6.9 22l1.1-5.4-4-3.8 5.5-.6z"/></svg></div><div><h4>Incorporated in Zambia</h4><p>Reg. No. 120241014919 — serving clients across Africa.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <div>
+      <h2>Have a project, tender or supply requirement?</h2>
+      <p>Tell us what you need — we'll respond with the right solution and a clear quote.</p>
+    </div>
+    <a href="#contact" class="btn btn-accent">Request a quote <span class="a">→</span></a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Contact us</span>
+      <h2>Let's build something reliable together</h2>
+      <p>Send us your requirement, tender or site details — our Kitwe team replies fast with the right solution and a clear, itemised quote.</p>
+    </div>
+    <div class="cwrap">
+      <div class="reveal">
+        <div class="cpic"><img src="img/contact-team.webp" alt="An Elembo engineer ready to help on your project" loading="lazy" /><span class="badge">Talk to a real engineer</span></div>
+        <div class="ci"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s7-5.6 7-11a7 7 0 10-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><h4>Office</h4><p>Mukuba Pension House, Office 339, 2nd Floor, West Wing, Stand 1429, President Avenue, Kitwe, Copperbelt, Zambia</p></div></div>
+        <div class="ci"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 005 5L19 18l-1 3a16 16 0 01-13-13z"/></svg></div><div><h4>Phone &amp; WhatsApp</h4><p>+260 769 552 250</p></div></div>
+        <div class="ci"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><div><h4>Email</h4><p>sales@elembotech.com</p></div></div>
+        <div class="ci"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><h4>Business hours</h4><p>Monday – Friday · 08:00 – 16:30 (CAT)</p></div></div>
+      </div>
+      <form class="reveal" id="enquiry">
+        <div class="row">
+          <div><label for="f-name">Full name</label><input id="f-name" name="name" type="text" required placeholder="Your name" /></div>
+          <div><label for="f-company">Company</label><input id="f-company" name="company" type="text" placeholder="Organisation" /></div>
+        </div>
+        <div class="row">
+          <div><label for="f-email">Email</label><input id="f-email" name="email" type="email" required placeholder="you@company.com" /></div>
+          <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" placeholder="+260 …" /></div>
+        </div>
+        <label for="f-area">Area of interest</label>
+        <select id="f-area" name="area">
+          <option>ICT &amp; Connectivity</option>
+          <option>Safety &amp; Security</option>
+          <option>Engineering</option>
+          <option>Construction</option>
+          <option>Consulting</option>
+          <option>Drone Survey</option>
+        </select>
+        <label for="f-msg">Message</label>
+        <textarea id="f-msg" name="message" required placeholder="Tell us about your project or requirement…"></textarea>
+        <button type="submit" class="btn btn-primary">Send enquiry</button>
+        <p class="formnote" id="formnote" hidden></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <img class="flogo" src="img/elembo-logo-white.webp" alt="Elembo Business Group Technology" />
+        <p class="fdesc">The trusted bridge between suppliers, manufacturers and clients — ICT, security, engineering, construction, consulting & drone survey across Africa.</p>
+        <div class="socials"><a href="https://wa.me/260769552250" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a><a href="mailto:sales@elembotech.com" aria-label="Email">@</a><a href="tel:+260769552250" aria-label="Phone">✆</a></div>
+      </div>
+      <div><h5>Solutions</h5><ul><li><a href="#services">ICT &amp; Connectivity</a></li><li><a href="#services">Safety &amp; Security</a></li><li><a href="#services">Engineering</a></li><li><a href="#services">Construction</a></li><li><a href="#services">Consulting</a></li><li><a href="#services">Drone Survey</a></li></ul></div>
+      <div><h5>Company</h5><ul><li><a href="#about">About</a></li><li><a href="#products">Products</a></li><li><a href="#industries">Industries</a></li><li><a href="#certs">Credentials</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h5>Get in touch</h5><ul><li><a href="tel:+260769552250">+260 769 552 250</a></li><li><a href="mailto:sales@elembotech.com">sales@elembotech.com</a></li><li><a href="#contact">Kitwe, Copperbelt — Zambia</a></li></ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 Elembo Business Technology Limited. All rights reserved.</span>
+      <span>Reg. No. 120241014919 · Kitwe, Zambia</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hdr=document.getElementById('hdr'),sprog=document.getElementById('sprog');
+  const heroBox=document.querySelector('.hero .herobox');
+  const onScroll=()=>{
+    const y=window.scrollY;hdr.classList.toggle('scrolled',y>30);
+    const max=document.documentElement.scrollHeight-window.innerHeight;
+    sprog.style.width=(max>0?y/max*100:0)+'%';
+    if(heroBox){const hide=y>140;heroBox.style.opacity=hide?'0':'';heroBox.style.transform=hide?'translateY(12px)':'';heroBox.style.pointerEvents=hide?'none':'';}
+  };
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+  const burger=document.getElementById('burger'),nav=document.getElementById('nav');
+  const setNav=o=>{nav.classList.toggle('open',o);burger.setAttribute('aria-expanded',o);};
+  burger.addEventListener('click',()=>setNav(!nav.classList.contains('open')));
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setNav(false)));
+
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4*0.07)+'s';io.observe(el);});
+
+  // analytics: track key CTA clicks
+  document.querySelectorAll('.btn').forEach(b=>b.addEventListener('click',()=>{
+    if(!window.eTrack) return;
+    const t=(b.textContent||'').trim().toLowerCase();
+    if(t.indexOf('quote')>-1) eTrack('request_quote',{where: b.closest('header')?'nav':(b.closest('.cta')?'cta':'page')});
+    else if(t.indexOf('explore')>-1) eTrack('explore_solutions');
+    else if(t.indexOf('start a project')>-1) eTrack('start_project');
+    else if(t.indexOf('talk to')>-1) eTrack('talk_to_team');
+  }));
+
+  const reduceM=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const counters=document.querySelectorAll('[data-count]');
+  if(counters.length){
+    const co=new IntersectionObserver((es)=>es.forEach(e=>{
+      if(!e.isIntersecting)return;const el=e.target,t=parseInt(el.dataset.count,10);co.unobserve(el);
+      if(reduceM){el.textContent=t;return;}
+      const dur=1300,t0=performance.now();
+      const tick=(n)=>{const p=Math.min((n-t0)/dur,1),e2=1-Math.pow(1-p,3);el.textContent=Math.round(t*e2);if(p<1)requestAnimationFrame(tick);};
+      requestAnimationFrame(tick);
+    }),{threshold:.6});
+    counters.forEach(c=>co.observe(c));
+  }
+
+  // contact form → posts the enquiry straight to the Elembo lead pipeline (no mail client involved)
+  const enquiry=document.getElementById('enquiry');
+  if(enquiry){
+    const LEAD_API='https://ceo-assistant-production-acc6.up.railway.app/api/lead';
+    const note=document.getElementById('formnote');
+    const val=id=>(enquiry.querySelector('#'+id)||{}).value||'';
+    const showNote=(t,ok)=>{note.hidden=false;note.classList.toggle('err',ok===false);note.textContent=t;};
+    enquiry.addEventListener('submit',async ev=>{
+      ev.preventDefault();
+      if(window.eTrack)eTrack('lead_form_submit',{area:val('f-area')});
+      const btn=enquiry.querySelector('button[type=submit]');
+      const label=btn?btn.textContent:''; if(btn){btn.disabled=true;btn.textContent='Sending…';}
+      showNote('Sending your request…',true);
+      try{
+        const r=await fetch(LEAD_API,{method:'POST',headers:{'Content-Type':'application/json'},
+          body:JSON.stringify({name:val('f-name'),company:val('f-company'),email:val('f-email'),
+            phone:val('f-phone'),area:val('f-area'),message:val('f-msg')})});
+        const data=await r.json().catch(()=>({}));
+        if(r.ok && data && data.ok){
+          enquiry.reset();
+          showNote('✓ Thank you! Your request has reached our team — we’ll reply with a quote shortly.',true);
+        }else{
+          showNote('Sorry, we couldn’t send that just now. Please email sales@elembotech.com or call/WhatsApp +260 769 552 250.',false);
+        }
+      }catch(e){
+        showNote('Sorry, we couldn’t send that just now. Please email sales@elembotech.com or call/WhatsApp +260 769 552 250.',false);
+      }
+      finally{ if(btn){btn.disabled=false;btn.textContent=label;} }
+    });
+  }
+
+  // hero content 3D cursor tilt
+  const heroEl=document.querySelector('.hero'), hcEl=document.querySelector('.hcontent');
+  if(heroEl&&hcEl&&!reduceM){
+    heroEl.addEventListener('pointermove',e=>{
+      const r=heroEl.getBoundingClientRect();
+      const px=(e.clientX-r.left)/r.width-0.5, py=(e.clientY-r.top)/r.height-0.5;
+      heroEl.classList.add('tilt');
+      hcEl.style.setProperty('--ry',(px*9).toFixed(2)+'deg');
+      hcEl.style.setProperty('--rx',(py*-6.5).toFixed(2)+'deg');
+    });
+    heroEl.addEventListener('pointerleave',()=>{heroEl.classList.remove('tilt');hcEl.style.removeProperty('--rx');hcEl.style.removeProperty('--ry');});
+  }
+
+  const mxfilter=document.getElementById('mxfilter');
+  if(mxfilter){
+    const cards=[...document.querySelectorAll('#mxgrid .mxc')];
+    mxfilter.addEventListener('click',e=>{
+      const b=e.target.closest('.fbtn');if(!b)return;
+      mxfilter.querySelectorAll('.fbtn').forEach(x=>x.classList.remove('active'));b.classList.add('active');
+      const f=b.dataset.filter;
+      cards.forEach((c,i)=>{const show=f==='all'||c.dataset.cat===f;c.classList.remove('anim');
+        if(show){c.classList.remove('hide');void c.offsetWidth;c.style.animationDelay=(i%3*0.05)+'s';c.classList.add('anim');}else c.classList.add('hide');});
+    });
+  }
+
+  /* ---- Elembo chat widget ---- */
+  (function init(){
+    if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);return;}
+    const CHAT_API = 'https://ceo-assistant-production-acc6.up.railway.app/api/public-chat';
+    const w   = document.getElementById('chatw');
+    const fab = document.getElementById('chatFab');
+    const panel = document.getElementById('chatPanel');
+    const msgs  = document.getElementById('chatMsgs');
+    const form  = document.getElementById('chatForm');
+    const input = document.getElementById('chatText');
+    if(!w) return;
+    const history = [];
+
+    const open=()=>{w.classList.add('open');panel.hidden=false;setTimeout(()=>input.focus(),60);if(window.eTrack)eTrack('chat_open');};
+    const close=()=>{w.classList.remove('open');panel.hidden=true;};
+    fab.addEventListener('click',open);
+    document.getElementById('chatClose').addEventListener('click',close);
+
+    function add(text,who){
+      const d=document.createElement('div');d.className='msg '+who;d.textContent=text;
+      msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;return d;
+    }
+    function typing(){
+      const d=document.createElement('div');d.className='msg bot typing';
+      d.innerHTML='<span></span><span></span><span></span>';
+      msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;return d;
+    }
+    async function send(text){
+      add(text,'me');history.push({role:'user',content:text});
+      const t=typing();
+      try{
+        const r=await fetch(CHAT_API,{method:'POST',headers:{'Content-Type':'application/json'},
+          body:JSON.stringify({message:text,history:history.slice(0,-1)})});
+        const data=await r.json();
+        t.remove();
+        const reply=(data && data.reply) ? data.reply
+          : "Thanks! For a quick response, email sales@elembotech.com or call +260 769 552 250.";
+        add(reply,'bot');history.push({role:'assistant',content:reply});
+      }catch(e){
+        t.remove();
+        add("I couldn't reach our assistant right now. Please email sales@elembotech.com or use the contact form below.",'bot');
+      }
+    }
+    form.addEventListener('submit',e=>{e.preventDefault();const v=input.value.trim();if(!v)return;input.value='';send(v);});
+    document.querySelectorAll('#chatQuick button').forEach(b=>b.addEventListener('click',()=>{open();send(b.dataset.q||b.textContent);}));
+  })();
+</script>
+
+<!-- CHAT WIDGET -->
+<div class="chatw" id="chatw">
+  <button class="chat-fab" id="chatFab" aria-label="Chat with Elembo">
+    <svg viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 01-12.4 7.5L3 20l1.1-5.1A8.5 8.5 0 1121 11.5z"/><path d="M8 11h0M12 11h0M16 11h0"/></svg>
+    Chat with us
+  </button>
+  <div class="chat-panel" id="chatPanel" hidden>
+    <div class="chat-head">
+      <div class="ci">
+        <span class="av"><img src="img/elembo-logo-white.webp" alt="Elembo" /></span>
+        <div><b>Elembo Assistant</b><span class="st">Online — replies in seconds</span></div>
+      </div>
+      <button class="chat-close" id="chatClose" aria-label="Close">×</button>
+    </div>
+    <div class="chat-msgs" id="chatMsgs">
+      <div class="msg bot">Hi 👋 I'm Elembo's assistant. Ask me about our ICT, security, engineering, construction, consulting or drone solutions — or request a quote.</div>
+    </div>
+    <div class="chat-quick" id="chatQuick">
+      <button data-q="What services do you offer?">Our services</button>
+      <button data-q="I'd like to request a quote.">Request a quote</button>
+      <button data-q="How can I contact your team?">Contact</button>
+    </div>
+    <form class="chat-form" id="chatForm">
+      <input id="chatText" type="text" placeholder="Type your message…" autocomplete="off" />
+      <button class="send" type="submit" aria-label="Send"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+    </form>
+    <div class="chat-foot">Powered by Elembo AI</div>
+  </div>
+</div>
+
+</body>
+</html>
