@@ -437,6 +437,16 @@
   .chat-form .send svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
   .chat-foot{text-align:center;font-size:.66rem;color:var(--muted);padding:7px;background:var(--paper)}
   @media(max-width:480px){.chatw{right:14px;bottom:14px}}
+
+  /* ── World Cup 2026 banner (auto-shown 11 Jun → 19 Jul 2026) ── */
+  .wc-banner{display:none;align-items:center;justify-content:center;gap:9px;padding:9px 44px;position:relative;background:linear-gradient(90deg,#0c2a4d,#1f74cf 50%,#0c2a4d);color:#fff;font-size:.82rem;font-weight:600;text-align:center;transition:opacity .4s var(--ease);overflow:hidden}
+  .wc-banner b{font-weight:700}
+  .wc-banner .ball{display:inline-block;font-size:1rem;animation:wcRoll 5s linear infinite}
+  @keyframes wcRoll{to{transform:rotate(360deg)}}
+  .wc-banner .wc-close{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:24px;height:24px;border:0;border-radius:50%;background:rgba(255,255,255,.16);color:#fff;font-size:.78rem;cursor:pointer;display:grid;place-items:center;transition:.2s}
+  .wc-banner .wc-close:hover{background:rgba(255,255,255,.32)}
+  header.scrolled .wc-banner{height:0;padding-top:0;padding-bottom:0;opacity:0;pointer-events:none}
+  @media(max-width:640px){.wc-banner{font-size:.7rem;padding:8px 38px}}
 </style>
 <script type="application/ld+json">
 {
@@ -469,6 +479,11 @@
 
 <!-- HEADER -->
 <header id="hdr">
+  <div class="wc-banner" id="wcBanner" role="region" aria-label="FIFA World Cup 2026">
+    <span class="ball" aria-hidden="true">⚽</span>
+    <span>Game on! Celebrating the <b>FIFA World Cup 2026</b> — 11&nbsp;June&nbsp;→&nbsp;19&nbsp;July. May the beautiful game unite Africa!&nbsp;🏆</span>
+    <button class="wc-close" id="wcClose" aria-label="Hide banner">✕</button>
+  </div>
   <div class="wrap bar">
     <a href="#home" class="brand"><img src="img/elembo-logo.webp" alt="Elembo Business Group Technology" /></a>
     <nav id="nav">
@@ -1041,5 +1056,26 @@
   </div>
 </div>
 
+<script>
+// Bannière Coupe du Monde 2026 — visible uniquement du 11 juin au 19 juillet 2026
+(function(){
+  var start=new Date(2026,5,11), end=new Date(2026,6,19,23,59,59), now=new Date();
+  if(now<start||now>end)return;
+  try{if(localStorage.getItem('wc26Closed'))return}catch(e){}
+  var b=document.getElementById('wcBanner'), hero=document.querySelector('.hero');
+  if(!b||!hero)return;
+  b.style.display='flex';
+  var orig=parseFloat(getComputedStyle(hero).paddingTop)||120;
+  var fit=function(){ if(b.offsetHeight>0) hero.style.paddingTop=(orig+b.offsetHeight)+'px'; };
+  fit(); window.addEventListener('resize',fit);
+  document.getElementById('wcClose').addEventListener('click',function(){
+    b.style.display='none'; hero.style.paddingTop='';
+    window.removeEventListener('resize',fit);
+    try{localStorage.setItem('wc26Closed','1')}catch(e){}
+    if(window.eTrack)eTrack('wc_banner_close');
+  });
+  if(window.eTrack)eTrack('wc_banner_view');
+})();
+</script>
 </body>
 </html>
