@@ -487,16 +487,14 @@
 
 <!-- HEADER -->
 <header id="hdr">
-  <div class="wc-banner" id="wcBanner" role="region" aria-label="FIFA World Cup 2026">
+  <div class="wc-banner" id="wcBanner" role="region" aria-label="Event banner">
     <div class="wc-top">
-      <span class="ball" aria-hidden="true">⚽</span>
-      <span>Game on! Celebrating the <b>FIFA World Cup 2026</b> — 11&nbsp;June&nbsp;→&nbsp;19&nbsp;July. May the beautiful game unite Africa!</span>
-      <span class="trophy" aria-hidden="true">🏆</span>
+      <span class="ball" id="evIco1" aria-hidden="true"></span>
+      <span id="evMsg"></span>
+      <span class="trophy" id="evIco2" aria-hidden="true"></span>
     </div>
     <div class="wc-track" aria-hidden="true">
-      <div class="wc-marquee">
-        <span>⚽</span><span>🏆</span><span>🎉</span><span>🇺🇸</span><span>⚽</span><span>🇨🇦</span><span>🏆</span><span>🇲🇽</span><span>⚽</span><span>🌍</span><span>🎊</span><span>🥅</span><span>⚽</span><span>🏆</span><span>🎉</span><span>🇺🇸</span><span>⚽</span><span>🇨🇦</span><span>🏆</span><span>🇲🇽</span><span>⚽</span><span>🌍</span><span>🎊</span><span>🥅</span>
-      </div>
+      <div class="wc-marquee" id="evMarquee"></div>
     </div>
     <button class="wc-close" id="wcClose" aria-label="Hide banner">✕</button>
   </div>
@@ -1073,24 +1071,56 @@
 </div>
 
 <script>
-// Bannière Coupe du Monde 2026 — visible uniquement du 11 juin au 19 juillet 2026
+// Bannière événementielle — pilotée par events.json (journées mondiales + événements ponctuels)
 (function(){
-  var start=new Date(2026,5,11), end=new Date(2026,6,19,23,59,59), now=new Date();
-  if(now<start||now>end)return;
-  try{if(localStorage.getItem('wc26Closed'))return}catch(e){}
   var b=document.getElementById('wcBanner'), hero=document.querySelector('.hero');
   if(!b||!hero)return;
-  b.style.display='flex';
-  var orig=parseFloat(getComputedStyle(hero).paddingTop)||120;
-  var fit=function(){ if(b.offsetHeight>0) hero.style.paddingTop=(orig+b.offsetHeight)+'px'; };
-  fit(); window.addEventListener('resize',fit);
-  document.getElementById('wcClose').addEventListener('click',function(){
-    b.style.display='none'; hero.style.paddingTop='';
-    window.removeEventListener('resize',fit);
-    try{localStorage.setItem('wc26Closed','1')}catch(e){}
-    if(window.eTrack)eTrack('wc_banner_close');
-  });
-  if(window.eTrack)eTrack('wc_banner_view');
+  fetch('events.json').then(function(r){return r.json()}).then(function(cfg){
+    var now=new Date(), ev=null;
+    // 1) Événements ponctuels (prioritaires) : Coupe du Monde, messages de soutien…
+    (cfg.overrides||[]).forEach(function(o){
+      if(ev||o.enabled===false)return;
+      var f=new Date(o.from+'T00:00:00'), t=new Date(o.to+'T23:59:59');
+      if(now>=f&&now<=t)ev=o;
+    });
+    // 2) Journées mondiales récurrentes (chaque année)
+    if(!ev)(cfg.recurring||[]).forEach(function(o){
+      if(ev||o.enabled===false)return;
+      var days=o.days||1;
+      var f=new Date(now.getFullYear(),o.month-1,o.day);
+      var t=new Date(now.getFullYear(),o.month-1,o.day+days-1,23,59,59);
+      if(now>=f&&now<=t)ev=o;
+    });
+    if(!ev)return;
+    try{
+      if(localStorage.getItem('evClosed:'+ev.id))return;
+      if(ev.id==='world-cup-2026'&&localStorage.getItem('wc26Closed'))return;
+    }catch(e){}
+    // Remplit le contenu
+    var em=(ev.emojis&&ev.emojis.length)?ev.emojis:['🌍'];
+    document.getElementById('evMsg').innerHTML=ev.message;
+    document.getElementById('evIco1').textContent=em[0];
+    document.getElementById('evIco2').textContent=em[1]||em[0];
+    var seq=[]; while(seq.length<12) seq=seq.concat(em);
+    var mq=document.getElementById('evMarquee');
+    mq.innerHTML='';
+    seq.concat(seq).forEach(function(e){var s=document.createElement('span');s.textContent=e;mq.appendChild(s)});
+    if(ev.colors&&ev.colors.length>1){
+      b.style.background='linear-gradient(110deg,'+ev.colors[0]+','+ev.colors[1]+' 50%,'+ev.colors[0]+')';
+      b.style.backgroundSize='220% 100%';
+    }
+    b.style.display='flex';
+    var orig=parseFloat(getComputedStyle(hero).paddingTop)||120;
+    var fit=function(){ if(b.offsetHeight>0) hero.style.paddingTop=(orig+b.offsetHeight)+'px'; };
+    fit(); window.addEventListener('resize',fit);
+    document.getElementById('wcClose').addEventListener('click',function(){
+      b.style.display='none'; hero.style.paddingTop='';
+      window.removeEventListener('resize',fit);
+      try{localStorage.setItem('evClosed:'+ev.id,'1')}catch(e){}
+      if(window.eTrack)eTrack('event_banner_close',{event_id:ev.id});
+    });
+    if(window.eTrack)eTrack('event_banner_view',{event_id:ev.id});
+  }).catch(function(){});
 })();
 </script>
 </body>

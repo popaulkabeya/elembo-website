@@ -1,0 +1,200 @@
+{
+  "_doc": "Bannières événementielles du site Elembo. 'overrides' = événements ponctuels (Coupe du Monde, soutien après catastrophe) — prioritaires. 'recurring' = journées mondiales qui reviennent chaque année (month/day, days = durée en jours). Pour un message de soutien : copier l'exemple support-template, mettre enabled:true, ajuster id/dates/message, commit. Messages en anglais (site Elembo). colors = [foncé, clair] du dégradé.",
+  "overrides": [
+    {
+      "id": "world-cup-2026",
+      "from": "2026-06-11",
+      "to": "2026-07-19",
+      "message": "Game on! Celebrating the <b>FIFA World Cup 2026</b> — 11&nbsp;June&nbsp;→&nbsp;19&nbsp;July. May the beautiful game unite Africa!",
+      "emojis": [
+        "⚽",
+        "🏆",
+        "🎉",
+        "🇺🇸",
+        "🇨🇦",
+        "🇲🇽",
+        "🌍",
+        "🥅",
+        "🎊"
+      ],
+      "colors": [
+        "#0a1f3c",
+        "#1f74cf"
+      ]
+    },
+    {
+      "id": "support-template",
+      "enabled": false,
+      "from": "2099-01-01",
+      "to": "2099-01-07",
+      "message": "Our hearts are with the people of <b>Country</b> after the recent disaster. Elembo stands in solidarity. 🕊️",
+      "emojis": [
+        "🕊️",
+        "🤝",
+        "❤️",
+        "🌍",
+        "🙏"
+      ],
+      "colors": [
+        "#1c2733",
+        "#456073"
+      ]
+    }
+  ],
+  "recurring": [
+    {
+      "id": "womens-day",
+      "month": 3,
+      "day": 8,
+      "message": "Happy <b>International Women's Day</b> — to the women building Africa's future. 💜",
+      "emojis": [
+        "💜",
+        "👩🏾‍💼",
+        "👩🏾‍🔧",
+        "👩🏾‍⚕️",
+        "🌍",
+        "✨"
+      ],
+      "colors": [
+        "#3d1a5b",
+        "#8e44ad"
+      ]
+    },
+    {
+      "id": "forests-day",
+      "month": 3,
+      "day": 21,
+      "message": "<b>International Day of Forests</b> — every tree planted is a promise to tomorrow. 🌳",
+      "emojis": [
+        "🌳",
+        "🌱",
+        "🌲",
+        "🍃",
+        "🌍"
+      ],
+      "colors": [
+        "#143d23",
+        "#27ae60"
+      ]
+    },
+    {
+      "id": "water-day",
+      "month": 3,
+      "day": 22,
+      "message": "<b>World Water Day</b> — clean water is life. Let's protect every drop. 💧",
+      "emojis": [
+        "💧",
+        "🚰",
+        "🌊",
+        "🌍",
+        "💙"
+      ],
+      "colors": [
+        "#0a2d4d",
+        "#2980d9"
+      ]
+    },
+    {
+      "id": "earth-day",
+      "month": 4,
+      "day": 22,
+      "message": "Happy <b>Earth Day</b> — one planet, one home, one responsibility. 🌍",
+      "emojis": [
+        "🌍",
+        "🌎",
+        "🌱",
+        "♻️",
+        "💚"
+      ],
+      "colors": [
+        "#143d23",
+        "#27ae60"
+      ]
+    },
+    {
+      "id": "africa-day",
+      "month": 5,
+      "day": 25,
+      "message": "Happy <b>Africa Day</b> — proudly African, building together. 🌍",
+      "emojis": [
+        "🌍",
+        "✨",
+        "🥁",
+        "🦁",
+        "🤝"
+      ],
+      "colors": [
+        "#0a1f3c",
+        "#c8851a"
+      ]
+    },
+    {
+      "id": "environment-day",
+      "month": 6,
+      "day": 5,
+      "message": "<b>World Environment Day</b> — greener energy, cleaner future. 🌿",
+      "emojis": [
+        "🌿",
+        "🌍",
+        "☀️",
+        "♻️",
+        "🌱"
+      ],
+      "colors": [
+        "#143d23",
+        "#27ae60"
+      ]
+    },
+    {
+      "id": "youth-day",
+      "month": 8,
+      "day": 12,
+      "message": "<b>International Youth Day</b> — Africa's greatest energy is its youth. 🚀",
+      "emojis": [
+        "🚀",
+        "🎓",
+        "💡",
+        "⚽",
+        "🌍"
+      ],
+      "colors": [
+        "#0a1f3c",
+        "#1f74cf"
+      ]
+    },
+    {
+      "id": "food-day",
+      "month": 10,
+      "day": 16,
+      "message": "<b>World Food Day</b> — honouring those who feed our nations. 🌾",
+      "emojis": [
+        "🌾",
+        "🚜",
+        "🍚",
+        "🥬",
+        "🌍"
+      ],
+      "colors": [
+        "#4d3a0a",
+        "#c8851a"
+      ]
+    },
+    {
+      "id": "aids-day",
+      "month": 12,
+      "day": 1,
+      "message": "<b>World AIDS Day</b> — knowledge, treatment and zero stigma. Wear the red ribbon. ❤️",
+      "emojis": [
+        "❤️",
+        "🎗️",
+        "🤝",
+        "🌍",
+        "🙏"
+      ],
+      "colors": [
+        "#4d0a14",
+        "#c0392b"
+      ]
+    }
+  ]
+}
