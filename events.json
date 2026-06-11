@@ -39,6 +39,146 @@
         "#1c2733",
         "#456073"
       ]
+    },
+    {
+      "id": "ramadan-2027",
+      "from": "2027-02-08",
+      "to": "2027-02-11",
+      "message": "<b>Ramadan Kareem</b> — a blessed month to all our Muslim friends, clients and partners. 🌙",
+      "emojis": [
+        "🌙",
+        "⭐",
+        "🕌",
+        "✨",
+        "🤲🏾"
+      ],
+      "colors": [
+        "#0c3b2e",
+        "#1a7a5e"
+      ]
+    },
+    {
+      "id": "ramadan-2028",
+      "from": "2028-01-28",
+      "to": "2028-01-31",
+      "message": "<b>Ramadan Kareem</b> — a blessed month to all our Muslim friends, clients and partners. 🌙",
+      "emojis": [
+        "🌙",
+        "⭐",
+        "🕌",
+        "✨",
+        "🤲🏾"
+      ],
+      "colors": [
+        "#0c3b2e",
+        "#1a7a5e"
+      ]
+    },
+    {
+      "id": "ramadan-2029",
+      "from": "2029-01-16",
+      "to": "2029-01-19",
+      "message": "<b>Ramadan Kareem</b> — a blessed month to all our Muslim friends, clients and partners. 🌙",
+      "emojis": [
+        "🌙",
+        "⭐",
+        "🕌",
+        "✨",
+        "🤲🏾"
+      ],
+      "colors": [
+        "#0c3b2e",
+        "#1a7a5e"
+      ]
+    },
+    {
+      "id": "ramadan-2030",
+      "from": "2030-01-05",
+      "to": "2030-01-08",
+      "message": "<b>Ramadan Kareem</b> — a blessed month to all our Muslim friends, clients and partners. 🌙",
+      "emojis": [
+        "🌙",
+        "⭐",
+        "🕌",
+        "✨",
+        "🤲🏾"
+      ],
+      "colors": [
+        "#0c3b2e",
+        "#1a7a5e"
+      ]
+    },
+    {
+      "id": "eid-2027",
+      "from": "2027-03-09",
+      "to": "2027-03-11",
+      "message": "<b>Eid Mubarak!</b> Wishing joy, peace and togetherness to all celebrating. 🌙✨",
+      "emojis": [
+        "🌙",
+        "🎉",
+        "✨",
+        "🎊",
+        "⭐",
+        "🤝"
+      ],
+      "colors": [
+        "#0c3b2e",
+        "#1a7a5e"
+      ]
+    },
+    {
+      "id": "eid-2028",
+      "from": "2028-02-26",
+      "to": "2028-02-28",
+      "message": "<b>Eid Mubarak!</b> Wishing joy, peace and togetherness to all celebrating. 🌙✨",
+      "emojis": [
+        "🌙",
+        "🎉",
+        "✨",
+        "🎊",
+        "⭐",
+        "🤝"
+      ],
+      "colors": [
+        "#0c3b2e",
+        "#1a7a5e"
+      ]
+    },
+    {
+      "id": "eid-2029",
+      "from": "2029-02-14",
+      "to": "2029-02-16",
+      "message": "<b>Eid Mubarak!</b> Wishing joy, peace and togetherness to all celebrating. 🌙✨",
+      "emojis": [
+        "🌙",
+        "🎉",
+        "✨",
+        "🎊",
+        "⭐",
+        "🤝"
+      ],
+      "colors": [
+        "#0c3b2e",
+        "#1a7a5e"
+      ]
+    },
+    {
+      "id": "eid-2030",
+      "from": "2030-02-04",
+      "to": "2030-02-06",
+      "message": "<b>Eid Mubarak!</b> Wishing joy, peace and togetherness to all celebrating. 🌙✨",
+      "emojis": [
+        "🌙",
+        "🎉",
+        "✨",
+        "🎊",
+        "⭐",
+        "🤝"
+      ],
+      "colors": [
+        "#0c3b2e",
+        "#1a7a5e"
+      ]
     }
   ],
   "recurring": [
