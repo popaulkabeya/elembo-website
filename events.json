@@ -180,6 +180,44 @@
       ]
     },
     {
+      "id": "new-year",
+      "month": 1,
+      "day": 1,
+      "days": 2,
+      "message": "<b>Happy New Year {year}</b> — health, success and prosperity from all of us at Elembo! 🎆",
+      "emojis": [
+        "🎆",
+        "🥂",
+        "✨",
+        "🎊",
+        "🍾",
+        "🌍"
+      ],
+      "colors": [
+        "#0a1f3c",
+        "#c8851a"
+      ]
+    },
+    {
+      "id": "festive-season",
+      "month": 12,
+      "day": 24,
+      "days": 8,
+      "message": "Season's Greetings! <b>Merry Christmas</b> & a wonderful festive season from the Elembo family. 🎄",
+      "emojis": [
+        "🎄",
+        "🎁",
+        "⭐",
+        "❄️",
+        "✨",
+        "🎅🏾"
+      ],
+      "colors": [
+        "#0e3b1e",
+        "#b3231f"
+      ]
+    },
+    {
       "id": "aids-day",
       "month": 12,
       "day": 1,

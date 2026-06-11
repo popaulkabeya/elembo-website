@@ -1098,7 +1098,7 @@
     }catch(e){}
     // Remplit le contenu
     var em=(ev.emojis&&ev.emojis.length)?ev.emojis:['🌍'];
-    document.getElementById('evMsg').innerHTML=ev.message;
+    document.getElementById('evMsg').innerHTML=ev.message.replace('{year}',now.getFullYear());
     document.getElementById('evIco1').textContent=em[0];
     document.getElementById('evIco2').textContent=em[1]||em[0];
     var seq=[]; while(seq.length<12) seq=seq.concat(em);
