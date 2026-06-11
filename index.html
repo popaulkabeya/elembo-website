@@ -439,14 +439,17 @@
   @media(max-width:480px){.chatw{right:14px;bottom:14px}}
 
   /* ── World Cup 2026 banner (auto-shown 11 Jun → 19 Jul 2026) ── */
-  .wc-banner{display:none;align-items:center;justify-content:center;gap:9px;padding:9px 44px;position:relative;background:linear-gradient(90deg,#0c2a4d,#1f74cf 50%,#0c2a4d);color:#fff;font-size:.82rem;font-weight:600;text-align:center;transition:opacity .4s var(--ease);overflow:hidden}
-  .wc-banner b{font-weight:700}
-  .wc-banner .ball{display:inline-block;font-size:1rem;animation:wcRoll 5s linear infinite}
+  .wc-banner{display:none;align-items:center;justify-content:center;gap:12px;padding:14px 52px;position:relative;color:#fff;font-size:1rem;font-weight:600;letter-spacing:.01em;text-align:center;transition:opacity .4s var(--ease);overflow:hidden;border-bottom:3px solid #ffd34d;background:linear-gradient(110deg,#0a1f3c,#13427e 25%,#1f74cf 50%,#13427e 75%,#0a1f3c);background-size:220% 100%;animation:wcSheen 7s linear infinite}
+  @keyframes wcSheen{to{background-position:-220% 0}}
+  .wc-banner b{font-weight:800;color:#ffd34d;text-shadow:0 1px 8px rgba(255,211,77,.35)}
+  .wc-banner .ball{display:inline-block;font-size:1.45rem;animation:wcRoll 4s linear infinite;filter:drop-shadow(0 2px 6px rgba(0,0,0,.4))}
   @keyframes wcRoll{to{transform:rotate(360deg)}}
-  .wc-banner .wc-close{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:24px;height:24px;border:0;border-radius:50%;background:rgba(255,255,255,.16);color:#fff;font-size:.78rem;cursor:pointer;display:grid;place-items:center;transition:.2s}
-  .wc-banner .wc-close:hover{background:rgba(255,255,255,.32)}
-  header.scrolled .wc-banner{height:0;padding-top:0;padding-bottom:0;opacity:0;pointer-events:none}
-  @media(max-width:640px){.wc-banner{font-size:.7rem;padding:8px 38px}}
+  .wc-banner .trophy{display:inline-block;font-size:1.3rem;animation:wcPop 2.4s var(--ease) infinite}
+  @keyframes wcPop{0%,100%{transform:scale(1)}50%{transform:scale(1.22)}}
+  .wc-banner .wc-close{position:absolute;right:14px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;border-radius:50%;background:rgba(255,255,255,.18);color:#fff;font-size:.85rem;cursor:pointer;display:grid;place-items:center;transition:.2s}
+  .wc-banner .wc-close:hover{background:rgba(255,255,255,.36)}
+  header.scrolled .wc-banner{height:0;padding-top:0;padding-bottom:0;border-bottom-width:0;opacity:0;pointer-events:none}
+  @media(max-width:640px){.wc-banner{font-size:.8rem;padding:11px 44px;gap:8px}.wc-banner .ball{font-size:1.15rem}.wc-banner .trophy{font-size:1.05rem}}
 </style>
 <script type="application/ld+json">
 {
@@ -481,7 +484,8 @@
 <header id="hdr">
   <div class="wc-banner" id="wcBanner" role="region" aria-label="FIFA World Cup 2026">
     <span class="ball" aria-hidden="true">⚽</span>
-    <span>Game on! Celebrating the <b>FIFA World Cup 2026</b> — 11&nbsp;June&nbsp;→&nbsp;19&nbsp;July. May the beautiful game unite Africa!&nbsp;🏆</span>
+    <span>Game on! Celebrating the <b>FIFA World Cup 2026</b> — 11&nbsp;June&nbsp;→&nbsp;19&nbsp;July. May the beautiful game unite Africa!</span>
+    <span class="trophy" aria-hidden="true">🏆</span>
     <button class="wc-close" id="wcClose" aria-label="Hide banner">✕</button>
   </div>
   <div class="wrap bar">
